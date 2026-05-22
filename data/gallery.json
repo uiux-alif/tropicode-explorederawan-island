@@ -1,0 +1,14 @@
+[
+  { "id": 1, "category": "underwater", "title": "Manta Ray Sangalaki", "image": "assets/images/1.jpg", "size": "large" },
+  { "id": 2, "category": "islands", "title": "Pantai Pulau Derawan", "image": "assets/images/2.jpg", "size": "medium" },
+  { "id": 3, "category": "underwater", "title": "Danau Ubur-Ubur Kakaban", "image": "assets/images/3.jpg", "size": "medium" },
+  { "id": 4, "category": "resorts", "title": "Maratua Paradise Resort", "image": "assets/images/4.jpg", "size": "large" },
+  { "id": 5, "category": "snorkeling", "title": "Snorkeling di Derawan", "image": "assets/images/5.jpg", "size": "medium" },
+  { "id": 6, "category": "whale-sharks", "title": "Whale Shark Encounter", "image": "assets/images/6.jpg", "size": "large" },
+  { "id": 7, "category": "drone", "title": "Aerial View Maratua Atoll", "image": "assets/images/7.jpg", "size": "large" },
+  { "id": 8, "category": "islands", "title": "Laguna Biru Maratua", "image": "assets/images/1.jpg", "size": "medium" },
+  { "id": 9, "category": "snorkeling", "title": "Terumbu Karang Sangalaki", "image": "assets/images/2.jpg", "size": "medium" },
+  { "id": 10, "category": "resorts", "title": "Cottage Tepi Pantai", "image": "assets/images/3.jpg", "size": "medium" },
+  { "id": 11, "category": "drone", "title": "Kepulauan Derawan dari Udara", "image": "assets/images/4.jpg", "size": "large" },
+  { "id": 12, "category": "underwater", "title": "Penyu Hijau Derawan", "image": "assets/images/1.jpg", "size": "medium" }
+]

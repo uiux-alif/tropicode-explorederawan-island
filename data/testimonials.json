@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Rania Putri",
+    "origin": "Jakarta",
+    "trip": "Private Trip 4D3N",
+    "rating": 5,
+    "review": "Pengalaman luar biasa! Guide-nya sangat profesional dan ramah. Snorkeling di Kakaban dan berenang bersama ubur-ubur adalah momen yang tidak akan pernah saya lupakan. Highly recommended!",
+    "avatar": "https://i.pravatar.cc/80?img=1",
+    "date": "Desember 2024"
+  },
+  {
+    "id": 2,
+    "name": "Budi Santoso",
+    "origin": "Surabaya",
+    "trip": "Open Trip 3D2N",
+    "rating": 5,
+    "review": "Servis luar biasa dari awal sampai akhir. Cottage-nya bersih dan nyaman, makanan enak, dan spot snorkeling-nya memang surga. Tim Explore Derawan sangat responsif dan helpful.",
+    "avatar": "https://i.pravatar.cc/80?img=3",
+    "date": "November 2024"
+  },
+  {
+    "id": 3,
+    "name": "Melissa Tan",
+    "origin": "Bandung",
+    "trip": "Luxury Trip",
+    "rating": 5,
+    "review": "Luxury trip yang benar-benar luxury! Resort di Maratua sangat eksotis. Melihat manta ray dari dekat adalah dream come true. Worth every penny dan pasti akan kembali lagi.",
+    "avatar": "https://i.pravatar.cc/80?img=5",
+    "date": "Oktober 2024"
+  },
+  {
+    "id": 4,
+    "name": "Dimas Prabowo",
+    "origin": "Yogyakarta",
+    "trip": "Diving Trip",
+    "rating": 5,
+    "review": "Sebagai dive enthusiast, Maratua adalah surga! Visibility air jernih, arus yang exciting, dan encounter dengan whale shark di hari terakhir adalah puncak dari petualangan saya.",
+    "avatar": "https://i.pravatar.cc/80?img=7",
+    "date": "September 2024"
+  },
+  {
+    "id": 5,
+    "name": "Sari Wijaya",
+    "origin": "Makassar",
+    "trip": "Open Trip 3D2N",
+    "rating": 5,
+    "review": "Saya pergi bersama keluarga dan anak-anak saya sangat happy! Tim Explore Derawan sangat perhatian dan aman untuk keluarga. Pulau Derawan memang surga tersembunyi Indonesia.",
+    "avatar": "https://i.pravatar.cc/80?img=9",
+    "date": "Agustus 2024"
+  }
+]

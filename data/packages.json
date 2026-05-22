@@ -1,0 +1,74 @@
+[
+  {
+    "id": "open-trip-3d2n",
+    "type": "open-trip",
+    "title": "Open Trip 3 Hari 2 Malam",
+    "duration": "3 Hari 2 Malam",
+    "destinations": ["Pulau Derawan", "Pulau Sangalaki", "Pulau Kakaban"],
+    "facilities": ["Cottage", "Meals 3x", "Snorkeling Set", "Speed Boat", "Tour Guide"],
+    "price_from": 1750000,
+    "badge": "Terpopuler",
+    "image": "assets/images/1.jpg",
+    "slug": "open-trip-3d2n"
+  },
+  {
+    "id": "private-trip-4d3n",
+    "type": "private-trip",
+    "title": "Private Trip 4 Hari 3 Malam",
+    "duration": "4 Hari 3 Malam",
+    "destinations": ["Pulau Derawan", "Pulau Maratua", "Pulau Kakaban", "Pulau Sangalaki"],
+    "facilities": ["Private Cottage", "All Meals", "Snorkeling & Diving Set", "Private Speed Boat", "Dokumentasi", "Tour Guide"],
+    "price_from": 3200000,
+    "badge": "Best Value",
+    "image": "assets/images/2.jpg",
+    "slug": "private-trip-4d3n"
+  },
+  {
+    "id": "luxury-trip",
+    "type": "luxury-trip",
+    "title": "Luxury Island Experience",
+    "duration": "4 Hari 3 Malam",
+    "destinations": ["Maratua Paradise Resort", "Pulau Kakaban", "Whale Shark Point"],
+    "facilities": ["Luxury Resort", "Fine Dining", "Private Yacht", "Underwater Dokumentasi", "Spa", "Butler Service"],
+    "price_from": 8500000,
+    "badge": "Premium",
+    "image": "assets/images/3.jpg",
+    "slug": "luxury-trip"
+  },
+  {
+    "id": "one-day-trip",
+    "type": "one-day-trip",
+    "title": "One Day Trip Derawan",
+    "duration": "1 Hari",
+    "destinations": ["Pulau Derawan", "Pulau Sangalaki"],
+    "facilities": ["Speed Boat", "Snorkeling Set", "Lunch", "Tour Guide"],
+    "price_from": 450000,
+    "badge": "Santai",
+    "image": "assets/images/4.jpg",
+    "slug": "one-day-trip"
+  },
+  {
+    "id": "custom-trip",
+    "type": "custom-trip",
+    "title": "Custom Trip Derawan",
+    "duration": "Fleksibel",
+    "destinations": ["Sesuai Permintaan"],
+    "facilities": ["Itinerary Custom", "Akomodasi Pilihan", "Speed Boat", "Tour Guide"],
+    "price_from": 0,
+    "badge": "Fleksibel",
+    "image": "assets/images/5.jpg",
+    "slug": "custom-trip"
+  },
+  {
+    "id": "diving-trip",
+    "type": "diving-trip",
+    "title": "Diving Trip Maratua",
+    "duration": "4 Hari 3 Malam",
+    "destinations": ["Pulau Maratua", "Pulau Sangalaki", "Kakaban Lake"],
+    "facilities": ["Diving Equipment", "Dive Master", "Cottage", "All Meals", "Speed Boat", "Dokumentasi Underwater"],
+    "price_from": 4200000,
+    "badge": "Adventurous",
+    "image": "assets/images/6.jpg",
+    "slug": "diving-trip"
+  }
+]

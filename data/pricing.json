@@ -1,0 +1,59 @@
+{
+  "note": "Harga berlaku untuk Low Season (Jan–Jun & Sep–Nov), WNI. High Season surcharge 15–25%.",
+  "packages": [
+    {
+      "id": "open-trip-3d2n",
+      "title": "Open Trip 3 Hari 2 Malam",
+      "duration": "3D2N",
+      "pricing": [
+        { "pax": "4 Pax", "tanjung_batu": 1750000, "berau": 2300000, "tarakan": 5200000 },
+        { "pax": "5–6 Pax", "tanjung_batu": 1550000, "berau": 2100000, "tarakan": 4800000 },
+        { "pax": "7–9 Pax", "tanjung_batu": 1400000, "berau": 1950000, "tarakan": 4500000 },
+        { "pax": "10–12 Pax", "tanjung_batu": 1250000, "berau": 1800000, "tarakan": 4200000 }
+      ]
+    },
+    {
+      "id": "private-trip-4d3n",
+      "title": "Private Trip 4 Hari 3 Malam",
+      "duration": "4D3N",
+      "pricing": [
+        { "pax": "2 Pax", "tanjung_batu": 3200000, "berau": 3990000, "tarakan": 8350000 },
+        { "pax": "3 Pax", "tanjung_batu": 2800000, "berau": 3550000, "tarakan": 7200000 },
+        { "pax": "4–5 Pax", "tanjung_batu": 2450000, "berau": 3100000, "tarakan": 6500000 },
+        { "pax": "6–8 Pax", "tanjung_batu": 2100000, "berau": 2800000, "tarakan": 5900000 },
+        { "pax": "9–12 Pax", "tanjung_batu": 1900000, "berau": 2500000, "tarakan": 5200000 }
+      ]
+    },
+    {
+      "id": "luxury-trip",
+      "title": "Luxury Trip 4 Hari 3 Malam",
+      "duration": "4D3N",
+      "pricing": [
+        { "pax": "2 Pax", "tanjung_batu": 8500000, "berau": 9200000, "tarakan": 13500000 },
+        { "pax": "3–4 Pax", "tanjung_batu": 7200000, "berau": 7900000, "tarakan": 12000000 },
+        { "pax": "5–6 Pax", "tanjung_batu": 6500000, "berau": 7100000, "tarakan": 10800000 }
+      ]
+    },
+    {
+      "id": "one-day-trip",
+      "title": "One Day Trip",
+      "duration": "1 Hari",
+      "pricing": [
+        { "pax": "2 Pax", "tanjung_batu": 650000, "berau": 950000, "tarakan": 2800000 },
+        { "pax": "3–4 Pax", "tanjung_batu": 500000, "berau": 750000, "tarakan": 2400000 },
+        { "pax": "5–8 Pax", "tanjung_batu": 420000, "berau": 650000, "tarakan": 2100000 },
+        { "pax": "9–12 Pax", "tanjung_batu": 380000, "berau": 580000, "tarakan": 1900000 }
+      ]
+    },
+    {
+      "id": "diving-trip",
+      "title": "Diving Trip 4 Hari 3 Malam",
+      "duration": "4D3N",
+      "pricing": [
+        { "pax": "2 Pax", "tanjung_batu": 4200000, "berau": 5000000, "tarakan": 9500000 },
+        { "pax": "3–4 Pax", "tanjung_batu": 3700000, "berau": 4400000, "tarakan": 8500000 },
+        { "pax": "5–8 Pax", "tanjung_batu": 3200000, "berau": 3900000, "tarakan": 7500000 }
+      ]
+    }
+  ]
+}

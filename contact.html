@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak Explore Derawan — Konsultasi &amp; Booking Paket Wisata</title>
+  <meta name="description" content="Hubungi tim Explore Derawan untuk konsultasi paket wisata, booking trip, dan pertanyaan seputar Kepulauan Derawan. WhatsApp, email, atau form online.">
+  <meta property="og:title" content="Kontak Explore Derawan — Konsultasi Gratis">
+  <meta property="og:description" content="Konsultasi paket wisata Kepulauan Derawan gratis. Hubungi kami via WhatsApp, email, atau isi form online.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-info-card {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: var(--white);
+      border-radius: var(--r-lg);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--ocean-pale);
+      transition: all var(--t-fast);
+    }
+
+    .contact-info-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--ocean-bright);
+    }
+
+    .contact-info-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: var(--ocean-pale);
+      border-radius: var(--r-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-info-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-info-value {
+      font-size: 0.875rem;
+      color: var(--text-mid);
+    }
+
+    .contact-info-value a {
+      color: var(--ocean-bright);
+      transition: color var(--t-fast);
+    }
+
+    .contact-info-value a:hover { color: var(--ocean-mid); }
+
+    .wa-big-btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #25d366;
+      color: white;
+      padding: 1.25rem 1.75rem;
+      border-radius: var(--r-lg);
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.35);
+      transition: all var(--t-mid) var(--ease);
+      margin-bottom: 1.5rem;
+    }
+
+    .wa-big-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(37,211,102,0.45);
+      background: #1ebe5d;
+    }
+
+    .wa-big-btn-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .wa-big-btn-text small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.8rem;
+      opacity: 0.85;
+      margin-top: 0.1rem;
+    }
+
+    .map-placeholder {
+      background: var(--ocean-pale);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .map-placeholder iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .form-card {
+      background: var(--white);
+      border-radius: var(--r-xl);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--ocean-pale);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .form-success.show { display: block; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .trip-select-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+
+    .trip-select-option {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.75rem;
+      border: 2px solid var(--ocean-pale);
+      border-radius: var(--r-md);
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: all var(--t-fast);
+      background: var(--white);
+    }
+
+    .trip-select-option:has(input:checked),
+    .trip-select-option.selected {
+      border-color: var(--ocean-bright);
+      background: var(--ocean-pale);
+      color: var(--ocean-bright);
+    }
+
+    .trip-select-option input {
+      display: none;
+    }
+
+    .faq-mini {
+      background: var(--ocean-pale);
+      border-radius: var(--r-lg);
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .faq-mini h4 {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .faq-mini-item {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(21,119,196,0.1);
+    }
+
+    .faq-mini-item:last-child { border-bottom: none; }
+
+    .faq-mini-item::before { content: '💬'; flex-shrink: 0; }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .trip-select-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body data-page="contact">
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo">Explore <span>Derawan</span></a>
+        <div class="nav-overlay" id="navOverlay"></div>
+        <ul class="nav-menu" id="navMenu" role="list">
+          <li><a href="index.html"        class="nav-link">Beranda</a></li>
+          <li><a href="packages.html"     class="nav-link">Paket Wisata</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinasi</a></li>
+          <li><a href="gallery.html"      class="nav-link">Galeri</a></li>
+          <li><a href="contact.html"      class="nav-link active">Kontak</a></li>
+          <li>
+            <a href="https://wa.me/6281234567890?text=Halo%20Explore%20Derawan%2C%20saya%20ingin%20info%20paket%20wisata"
+               class="nav-link nav-cta" target="_blank" rel="noopener">📲 WhatsApp</a>
+          </li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Beranda</a>
+          <span class="sep">/</span>
+          <span>Kontak</span>
+        </nav>
+        <h1 class="h1">Hubungi Kami</h1>
+        <p class="lead">Tim Explore Derawan siap membantu Anda merancang perjalanan impian ke Kepulauan Derawan. Konsultasi gratis, respon cepat.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Main -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Contact Info -->
+        <div class="reveal">
+          <!-- WA Big Button -->
+          <a href="https://wa.me/6281234567890?text=Halo%20Explore%20Derawan%2C%20saya%20ingin%20konsultasi%20paket%20wisata%20Derawan.%20Boleh%20minta%20info%20lengkapnya%3F"
+             class="wa-big-btn" target="_blank" rel="noopener">
+            <div class="wa-big-btn-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div class="wa-big-btn-text">
+              Chat WhatsApp Sekarang
+              <small>+62 812-3456-7890 · Respon &lt; 1 Jam</small>
+            </div>
+          </a>
+
+          <!-- Contact Info Cards -->
+          <div class="contact-info-cards">
+            <div class="contact-info-card">
+              <div class="contact-info-icon">📲</div>
+              <div>
+                <div class="contact-info-title">WhatsApp</div>
+                <div class="contact-info-value">
+                  <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">+62 812-3456-7890</a><br>
+                  <span style="font-size:0.8rem;color:var(--text-muted)">Senin–Minggu · 07.00–21.00 WITA</span>
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon">✉️</div>
+              <div>
+                <div class="contact-info-title">Email</div>
+                <div class="contact-info-value">
+                  <a href="mailto:info@explorederawan.id">info@explorederawan.id</a><br>
+                  <span style="font-size:0.8rem;color:var(--text-muted)">Respon dalam 24 jam</span>
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon">📍</div>
+              <div>
+                <div class="contact-info-title">Alamat Kantor</div>
+                <div class="contact-info-value">
+                  Jl. Pantai Derawan No. 1<br>
+                  Pulau Derawan, Berau<br>
+                  Kalimantan Timur 77372
+                </div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon">🕐</div>
+              <div>
+                <div class="contact-info-title">Jam Operasional</div>
+                <div class="contact-info-value">
+                  Senin – Jumat: 08.00 – 17.00 WITA<br>
+                  Sabtu – Minggu: 08.00 – 15.00 WITA<br>
+                  <span style="color:var(--green-badge);font-weight:600">WhatsApp aktif setiap hari</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <div class="footer-heading" style="color:var(--text-dark);margin-bottom:1rem">Ikuti Kami</div>
+            <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+              <a href="https://instagram.com/explorederawan" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">📷 Instagram</a>
+              <a href="https://tiktok.com/@explorederawan"   class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">🎵 TikTok</a>
+              <a href="https://facebook.com/explorederawan" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">📘 Facebook</a>
+              <a href="https://youtube.com/@explorederawan" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">▶️ YouTube</a>
+            </div>
+          </div>
+
+          <!-- Mini FAQ -->
+          <div class="faq-mini mt-4">
+            <h4>💬 Pertanyaan yang Sering Masuk</h4>
+            <div class="faq-mini-item">Apakah ada open trip bulan ini?</div>
+            <div class="faq-mini-item">Berapa biaya private trip untuk 4 orang?</div>
+            <div class="faq-mini-item">Bisa custom itinerary tidak?</div>
+            <div class="faq-mini-item">Bagaimana cara ke Pulau Derawan dari Jakarta?</div>
+            <div class="faq-mini-item">Apakah ada promo group atau honeymoon?</div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="reveal">
+          <div class="form-card">
+            <h2 class="h3 mb-2">Kirim Pesan</h2>
+            <p style="color:var(--text-mid);font-size:0.9rem;margin-bottom:2rem">
+              Isi form di bawah dan tim kami akan menghubungi Anda via WhatsApp dalam 1–3 jam.
+            </p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="name">Nama Lengkap *</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Nama Anda" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">Nomor WhatsApp *</label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="+62 812..." required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="email@contoh.com">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Paket yang Diminati</label>
+                <div class="trip-select-grid" id="tripSelectGrid">
+                  <label class="trip-select-option"><input type="checkbox" name="trip" value="Open Trip"> Open Trip</label>
+                  <label class="trip-select-option"><input type="checkbox" name="trip" value="Private Trip"> Private Trip</label>
+                  <label class="trip-select-option"><input type="checkbox" name="trip" value="Luxury Trip"> Luxury Trip</label>
+                  <label class="trip-select-option"><input type="checkbox" name="trip" value="One Day Trip"> One Day Trip</label>
+                  <label class="trip-select-option"><input type="checkbox" name="trip" value="Diving Trip"> Diving Trip</label>
+                  <label class="trip-select-option"><input type="checkbox" name="trip" value="Custom Trip"> Custom Trip</label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="pax">Jumlah Peserta</label>
+                  <select id="pax" name="pax" class="form-control">
+                    <option value="">Pilih jumlah pax</option>
+                    <option value="1">1 orang (Solo)</option>
+                    <option value="2">2 orang</option>
+                    <option value="3-4">3–4 orang</option>
+                    <option value="5-8">5–8 orang</option>
+                    <option value="9-12">9–12 orang</option>
+                    <option value="13+">13+ orang (Grup)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="date">Rencana Tanggal</label>
+                  <input type="date" id="date" name="date" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Pertanyaan / Pesan</label>
+                <textarea id="message" name="message" class="form-control" rows="4"
+                  placeholder="Ceritakan rencana trip Anda, destinasi impian, atau pertanyaan yang ingin ditanyakan..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-wa" style="width:100%;justify-content:center;font-size:1rem;padding:1rem">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Kirim via WhatsApp
+              </button>
+
+              <p style="font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:0.75rem">
+                Form ini akan membuka WhatsApp dengan pesan otomatis. Data Anda aman dan tidak disimpan.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Maps -->
+  <section class="section section--sand">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="section-eyebrow">Temukan Kami</span>
+        <h2 class="h2">Lokasi Kantor</h2>
+        <p class="lead">Pulau Derawan, Kabupaten Berau, Kalimantan Timur</p>
+      </div>
+      <div class="map-placeholder reveal">
+        <!-- Google Maps Embed - replace src with actual embed URL -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127750.92!2d118.2!3d2.28!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32019e5d57f2e6d3%3A0xfbfd040be97b1a!2sPulau%20Derawan%2C%20Berau%2C%20East%20Kalimantan!5e0!3m2!1sen!2sid!4v1234567890"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Lokasi Pulau Derawan, Berau, Kalimantan Timur"
+          style="filter:grayscale(10%) contrast(1.05)">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <span class="section-eyebrow" style="color:var(--teal)">Jangan Tunda Lagi</span>
+        <h2 class="h2">Mulai Rencanakan Tripmu Hari Ini</h2>
+        <p class="lead">Slot paket terbatas untuk setiap keberangkatan. Hubungi kami sekarang dan amankan tempat Anda.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/6281234567890?text=Halo%20Explore%20Derawan%2C%20saya%20ingin%20mulai%20merencanakan%20trip%20ke%20Derawan"
+             class="btn btn-wa btn-lg" target="_blank" rel="noopener">📲 Chat WhatsApp</a>
+          <a href="packages.html" class="btn btn-outline btn-lg">🗺️ Lihat Paket Wisata</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">Explore <span>Derawan</span></a>
+          <p class="footer-desc">Mitra perjalanan terpercaya untuk wisata Kepulauan Derawan yang berkesan dan profesional.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Destinasi</div>
+          <ul class="footer-links">
+            <li><a href="destinations.html#pulau-derawan"   class="footer-link">Pulau Derawan</a></li>
+            <li><a href="destinations.html#pulau-sangalaki" class="footer-link">Pulau Sangalaki</a></li>
+            <li><a href="destinations.html#pulau-kakaban"   class="footer-link">Pulau Kakaban</a></li>
+            <li><a href="destinations.html#pulau-maratua"   class="footer-link">Pulau Maratua</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Paket Wisata</div>
+          <ul class="footer-links">
+            <li><a href="packages.html" class="footer-link">Open Trip</a></li>
+            <li><a href="packages.html" class="footer-link">Private Trip</a></li>
+            <li><a href="packages.html" class="footer-link">Luxury Trip</a></li>
+            <li><a href="packages.html" class="footer-link">Diving Trip</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Kontak</div>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/6281234567890" class="footer-link" target="_blank">📲 +62 812-3456-7890</a></li>
+            <li><a href="mailto:info@explorederawan.id" class="footer-link">✉️ info@explorederawan.id</a></li>
+            <li><span class="footer-link">📍 Pulau Derawan, Berau, Kaltim</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Explore Derawan. All rights reserved.</span>
+        <span>Kontak Wisata Derawan · Booking Paket Derawan</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Sticky -->
+  <a href="https://wa.me/6281234567890?text=Halo%20Explore%20Derawan%2C%20saya%20ingin%20konsultasi%20paket%20wisata"
+     class="wa-sticky" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Chat Sekarang
+  </a>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Trip checkbox visual toggle
+    document.querySelectorAll('.trip-select-option').forEach(label => {
+      label.addEventListener('click', () => {
+        setTimeout(() => {
+          const cb = label.querySelector('input');
+          label.classList.toggle('selected', cb.checked);
+        }, 0);
+      });
+    });
+
+    // Contact form: build WA message from all fields
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const fd   = new FormData(this);
+      const name = fd.get('name') || 'Tidak disebutkan';
+      const phone = fd.get('phone') || '-';
+      const email = fd.get('email') || '-';
+      const pax   = fd.get('pax') || '-';
+      const date  = fd.get('date') || '-';
+      const msg   = fd.get('message') || '-';
+      const trips = Array.from(document.querySelectorAll('input[name="trip"]:checked')).map(c => c.value).join(', ') || '-';
+
+      const text = encodeURIComponent(
+        `Halo Explore Derawan! 🌊\n\n` +
+        `Nama: ${name}\n` +
+        `WhatsApp: ${phone}\n` +
+        `Email: ${email}\n` +
+        `Paket Diminati: ${trips}\n` +
+        `Jumlah Peserta: ${pax}\n` +
+        `Rencana Tanggal: ${date}\n\n` +
+        `Pesan:\n${msg}`
+      );
+      window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "pulau-derawan",
+    "name": "Pulau Derawan",
+    "tagline": "Surga Penyu Hijau",
+    "description": "Pulau Derawan adalah ikon Kepulauan Derawan, terkenal dengan penyu hijau raksasa yang berenang bebas di sekitar dermaga. Air laut yang jernih dengan visibilitas hingga 20 meter menjadikannya surga snorkeling.",
+    "activities": ["Snorkeling", "Penyu Hijau", "Island Hopping", "Sunset View"],
+    "image": "assets/images/1.jpg",
+    "highlight": true
+  },
+  {
+    "id": "pulau-sangalaki",
+    "name": "Pulau Sangalaki",
+    "tagline": "Taman Manta Ray",
+    "description": "Sangalaki adalah rumah bagi ratusan Manta Ray yang berenang anggun di perairan sekitarnya. Pulau ini juga memiliki pantai bersarang penyu yang dilindungi.",
+    "activities": ["Manta Ray Diving", "Turtle Nesting", "Snorkeling", "Birdwatching"],
+    "image": "assets/images/2.jpg",
+    "highlight": true
+  },
+  {
+    "id": "pulau-kakaban",
+    "name": "Pulau Kakaban",
+    "tagline": "Danau Ubur-Ubur Tanpa Sengat",
+    "description": "Kakaban memiliki danau purba berusia jutaan tahun dengan ubur-ubur tak bersengat yang unik di dunia. Berenang bersama ribuan ubur-ubur adalah pengalaman yang tidak akan terlupakan.",
+    "activities": ["Jellyfish Lake Swimming", "Snorkeling", "Hiking", "Photography"],
+    "image": "assets/images/3.jpg",
+    "highlight": true
+  },
+  {
+    "id": "pulau-maratua",
+    "name": "Pulau Maratua",
+    "tagline": "Atol Tersembunyi Borneo",
+    "description": "Maratua adalah atol berbentuk tapal kuda dengan laguna biru yang memukau. Terkenal sebagai salah satu spot diving terbaik di dunia dengan arus kencang dan kehidupan laut yang melimpah.",
+    "activities": ["World-Class Diving", "Kayaking", "Resort Stays", "Lagoon Swimming"],
+    "image": "assets/images/4.jpg",
+    "highlight": true
+  },
+  {
+    "id": "pulau-manimbora",
+    "name": "Pulau Manimbora",
+    "tagline": "Pulau Terpencil Eksotis",
+    "description": "Manimbora adalah permata tersembunyi di Kepulauan Derawan. Pantainya yang putih bersih dan terumbu karang yang masih alami menjadikannya surga bagi para pecinta alam bawah laut.",
+    "activities": ["Snorkeling", "Beach Relaxing", "Photography", "Private Beach"],
+    "image": "assets/images/5.jpg",
+    "highlight": false
+  },
+  {
+    "id": "labuan-cermin",
+    "name": "Labuan Cermin",
+    "tagline": "Danau Dua Rasa",
+    "description": "Labuan Cermin adalah fenomena alam luar biasa — danau dengan dua lapisan air berbeda. Air tawar di atas, air asin di bawah. Visibilitas sempurna hingga dasar danau menciptakan efek seperti cermin.",
+    "activities": ["Mirror Lake Swimming", "Snorkeling", "Kayaking", "Photography"],
+    "image": "assets/images/6.jpg",
+    "highlight": false
+  },
+  {
+    "id": "whale-shark-point",
+    "name": "Whale Shark Point",
+    "tagline": "Berenang Bersama Hiu Terbesar",
+    "description": "Whale Shark Point di perairan Berau adalah salah satu lokasi terbaik di dunia untuk berenang berdampingan dengan hiu paus (Rhincodon typus) — ikan terbesar di bumi yang bersifat jinak.",
+    "activities": ["Whale Shark Swimming", "Snorkeling", "Photography", "Marine Biology"],
+    "image": "assets/images/7.jpg",
+    "highlight": true
+  }
+]
