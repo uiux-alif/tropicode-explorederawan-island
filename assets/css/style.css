@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-wa {
-  background: #25d366;
+  background: #1f9149;
   color: var(--white);
   box-shadow: 0 4px 16px rgba(37,211,102,0.35);
 }
@@ -263,7 +263,7 @@ h1, h2, h3, h4, h5 {
   transition: color var(--t-fast);
 }
 
-.nav-logo span { color: var(--teal); }
+.nav-logo span { color: #3fb1a0; }
 
 .nav-menu {
   display: flex;
@@ -293,11 +293,11 @@ h1, h2, h3, h4, h5 {
 
 .nav-cta {
   margin-left: 0.75rem;
-  background: #25d366;
+  background: #1f9149;
   color: var(--white) !important;
   padding: 0.55rem 1.2rem !important;
   border-radius: var(--r-full) !important;
-  background: #25d366 !important;
+  background: #1f9149 !important;
 }
 
 .nav-cta:hover { background: #1ebe5d !important; }
@@ -1131,7 +1131,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: #25d366;
+  background: #1f9149;
   color: var(--white);
   padding: 0.85rem 1.4rem;
   border-radius: var(--r-full);
